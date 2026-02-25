@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+:root {
+    --light-gray: hsl(0, 0%, 96%);
+    --primary-light: hsl(254, 88%, 90%);
+    --primary: hsl(256, 67%, 59%);
+    --accent-light: hsl(31, 66%, 93%);
+    --accent: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--light-gray);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+h2 {
+    color: var(--black);
+    font-weight: 500;
+    line-height: 1;
+    font-size: 1.8rem;
+    letter-spacing: -2px;
+
+}
+
+p {
+    color: black;
+    font-size: 1.125rem;
+}
+
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+.grid-container>div {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: .5rem;
+}
+
+.social {
+    display: grid;
+    place-items: center;
+    background: var(--primary);
+    text-align: center;
+}
+
+.social>h1 {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 1rem 1rem;
+    line-height: .9;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.social>img {
+    text-align: center;
+    width: 60%;
+}
+
+.social>p {
+    color: var(--primary-light);
+    padding: .5rem 0 .8rem 0;
+}
+
+.manage {
+    gap: .5rem;
+    background: var(--white);
+}
+
+/* .manage > h2 {
+   font-size: 1.5rem;
+} */
+
+.maintain {
+
+    background: var(--accent);
+    overflow: clip;
+}
+
+
+.maintain>img {
+    width: 65%;
+    margin-bottom: -35px;
+}
+
+.schedule {
+    place-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    background: var(--primary-light);
+
+}
+
+.schedule>h2 {
+    margin: 1rem 0 .5rem 0;
+}
+
+.schedule>p {
+    width: 88%;
+    margin-bottom: 1rem;
+}
+
+.grow {
+    background: var(--primary);
+}
+
+.grow>img {
+    width: 74%;
+    margin: .7rem 0 2rem 2.5rem;
+}
+
+.grow>h2 {
+    color: var(--white);
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: .8rem;
+    line-height: .9;
+    padding: 0 35px;
+}
+
+.faster {
+    background: var(--white);
+}
+
+.faster>h2 {
+    font-size: 3rem;
+}
+
+.faster>img {
+    width: 60%;
+}
+
+.create {
+    background: var(--accent-light);
+}
+
+.create>img {
+    width: 50%;
+}
+
+.italic-accent {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.write {
+    background: var(--accent);
+}
+
+.write>h2 {
+    padding: 0 35px 0 0;
+}
+
+.write>img {
+    width: 70%;
+}
+
+
+@media (min-width:768px) {
+
+    body {
+        place-items: center;
+
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .grid-container {
+        width: min(100% - 2rem, 1050px);
+        margin-inline: auto;
+        gap: 1.7rem;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+
+    .grid-container>div {
+
+        /* gap: 1rem; */
+        padding: 1.3rem 1.6rem;
+
+    }
+
+
+    .create {
+        grid-column: 1/2;
+        grid-row: 1/4;
+
+    }
+
+
+    .create>h2 {
+        margin-top: 2rem;
+    }
+
+    .create>img {
+        margin-top: -5rem;
+        width: 98%;
+
+    }
+
+    .social {
+        grid-column: 2/4;
+        grid-row: 1/3;
+    }
+
+    .schedule {
+        grid-column: 4/5;
+        grid-row: 1/5;
+        text-align: left;
+        overflow: clip;
+
+    }
+
+    .schedule>img {
+        width: 260%;
+        padding-left: 9.5rem;
+    }
+
+    .schedule>p {
+        width: 100%;
+    }
+
+    .manage {
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+
+    .manage>h2 {
+        max-width: 95%;
+    }
+
+    .maintain {
+        grid-column: 3/4;
+        grid-row: 3/5;
+        font-size: 10px;
+    }
+
+    .maintain>img {
+        width: 100%;
+        margin-bottom: -85px;
+    }
+
+    .schedule>h2,
+    .manage>h2,
+    .maintain>h2 {
+        font-size: 1.8rem;
+    }
+
+    .write {
+        grid-column: 1/2;
+        grid-row: 4/8;
+    }
+
+    .write>img {
+        width: 110%;
+    }
+
+
+    .faster {
+        grid-column: 2;
+        grid-row: 5/8;
+        padding-right: 0;
+    }
+
+    .faster>h2 {
+        font-size: 3.5rem;
+    }
+
+    .faster>p {
+
+        font-size: 1.1rem;
+
+    }
+
+    .faster>img {
+        width: 85%;
+    }
+
+    .grow {
+        grid-template-columns: 1fr 1.5fr;
+        place-items: center;
+        grid-column: 3/5;
+        grid-row: 5/8;
+    }
+
+    .grow>img {
+        width: 120%;
+    }
+
+    .grow>h2 {
+        font-weight: 400;
+        font-size: 2.4rem;
+        justify-self: end;
+        text-align: left;
+        padding-right: 0;
+    }
+
+
+}
